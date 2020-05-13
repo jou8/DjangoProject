@@ -6,27 +6,23 @@
 {% endblock title%}
 
 {% block content%}
-    <h1>Singin form</h1>
+    <h1 style="text-align: center;">Forms </h1>
     <hr>
-    <form action="" method="post" autocomplete="off">
-        {%csrf_token%}
-        {{form | crispy}}
+    <div class="container">
+        <div class="col-md-10 offset-md-1 mt-5">
+            <div class="jumbotron">
+                <form action="" method="post" autocomplete="off">
+                    {%csrf_token%}
+                    {{form | crispy}}
 
-        <div class="row">
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-success"><i class="fas fa-database"></i>Submit</button>
-            </div>
-            <div class="col-md-4">
-                <a href="{% url 'student_list'%}" class="btn btn-secondary btn-block btn-lg">
-                    <i class="fas fa-stream"></i> Back to list
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{% url 'home'%}" class="btn btn-secondary btn-block btn-lg">
-                    <i class="fas fa-stream"></i> Back to home
-                </a>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center;">
+                            <button type="submit" class="btn btn-success"><i class="fas fa-database"></i>Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-
-    </form>
+    </div>
+    
 {% endblock content%}

@@ -6,20 +6,21 @@
 
 
 {% block content%}
-    <h1>List des etudiants</h1>
+    <h1 style="text-align: center; text-shadow: inherit;">List </h1>
     <hr>
-    <table class="table table-borderless">
-        <thead class="border-bottom font-weight-bold">
+    <br>
+    <table class="table table-borderless ">
+        <thead class="thead-light">
             <tr>
-                <td>Nom</td>
-                <td>Prenom</td>
-                <td>Age</td>
-                <td>Sex</td>
-                <td>date de naissance</td>
-                <td>level</td>
-                <td>date d'ajout</td>
-                <td>Editer</td>
-                <td>Supprimer</td>
+                <th>Name</th>
+                <th>Firstname</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Birthday</th>
+                <th>Level</th>
+                <th>Created Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
                 
             </tr>
         </thead>
@@ -53,13 +54,6 @@
         <div class="col-md-4">
             <a href="{% url 'student_insert' %}" class="btn btn-outline-success">
                 <i class="fas fa-plus"></i> Inscrire
-            </a>
-        
-        </div>
-        
-        <div class="col-md-4">
-            <a href="{% url 'home'%}" class="btn btn-secondary btn-block btn-lg">
-                <i class="fas fa-stream"></i> Acceuil
             </a>
         </div>
     </div>
